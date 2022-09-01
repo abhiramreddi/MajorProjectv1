@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MajorProjectVersion1</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="majorprojectversion1">MajorProjectV1\nRegister</string>
+    <string name="register">Register</string>
+    <string name="phone">Phone</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="adsearn">AdsEarn</string>
+    <string name="login">Login</string>
+    <string name="register_here">register here</string>
+    <string name="upload">upload</string>
+    <string name="see_all">view all</string>
+</resources>
