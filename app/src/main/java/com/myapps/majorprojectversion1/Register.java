@@ -26,6 +26,8 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+
+
         email = findViewById(R.id.etEmail);
         username = findViewById(R.id.etUsername);
         password = findViewById(R.id.etPassword);
@@ -45,10 +47,31 @@ public class Register extends AppCompatActivity {
             String regUsername = Objects.requireNonNull(username.getText()).toString();
             String regPassword = Objects.requireNonNull(password.getText()).toString();
             String regPhone = Objects.requireNonNull(phone.getText()).toString();
+            //String expression = "^[\\w. +\\-]+@gmail\\.com$";
 
-            UserHelperClass userHelperClass = new UserHelperClass(regEmail, regUsername, regPassword, regPhone);
-            databaseReference.child(regUsername).setValue(userHelperClass);
-            Toast.makeText(this, "Registration Successful!", Toast.LENGTH_SHORT).show();
+            if (regEmail.length() >= 11) {
+                if (regUsername.length() >= 8) {
+                    if (regPassword.length() >= 8) {
+                        if (regPhone.length() == 10) {
+                            UserHelperClass userHelperClass = new UserHelperClass(regEmail, regUsername, regPassword, regPhone);
+                            databaseReference.child(regUsername).setValue(userHelperClass);
+                            Toast.makeText(this, "Registration Successful!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            phone.setError("enter phone correctly");
+                        }
+                    } else {
+                        password.setError("password must be at least 8 chars");
+                    }
+                } else {
+                    username.setError("username must be at least 8 characters ");
+                }
+            } else {
+                email.setError("enter email correctly");
+            }
+
+//            UserHelperClass userHelperClass = new UserHelperClass(regEmail, regUsername, regPassword, regPhone);
+//            databaseReference.child(regUsername).setValue(userHelperClass);
+//            Toast.makeText(this, "Registration Successful!", Toast.LENGTH_SHORT).show();
         });
 
 

@@ -9,36 +9,35 @@
         android:id="@id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="serif"
         android:text="@string/adsearn"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_marginTop="60dp"
-        android:textAlignment="center"
-        android:fontFamily="serif"
-        />
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/subTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/register"
-        android:textStyle="bold"
-        android:textSize="25sp"
+        android:layout_below="@id/title"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
+        android:text="@string/register"
         android:textColor="@color/black"
-        android:layout_below="@id/title"
-        />
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlinedTextFieldEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/subTitle"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
-        android:layout_below="@id/subTitle"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:hint="@string/email">
@@ -47,8 +46,7 @@
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            />
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,8 +66,7 @@
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            />
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,8 +86,8 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            />
+            android:inputType="textWebPassword"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,8 +107,7 @@
             android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            />
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -121,26 +117,25 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/outlinedTextFieldPhone"
         android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="40dp"
         android:backgroundTint="@color/black"
-        android:text="@string/register"
         android:elevation="4dp"
-        android:layout_marginTop="40dp"
+        android:text="@string/register"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnBackToLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/btnRegister"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
         android:backgroundTint="@color/white"
         android:elevation="4dp"
-        android:layout_below="@id/btnRegister"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="40dp"
         android:text="@string/back_to_login"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginLeft="40dp"
-        />
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -55,18 +55,17 @@ public class Login extends AppCompatActivity {
                             String emailFromDb = snapshot.child(loginUsername).child("email").getValue(String.class);
 
                             Intent intent = new Intent(getApplicationContext(), Home.class);
-                            intent.putExtra("name" , nameFromDb);
+                            intent.putExtra("name", nameFromDb);
                             intent.putExtra("username", usernameFromDb);
                             intent.putExtra("email", emailFromDb);
                             intent.putExtra("phone", phoneFromDb);
-
                             startActivity(intent);
 
-                        }else{
+
+                        } else {
                             Toast.makeText(Login.this, "error in password", Toast.LENGTH_SHORT).show();
                         }
-                    }
-                    else{
+                    } else {
                         Toast.makeText(Login.this, "No user exists", Toast.LENGTH_SHORT).show();
                     }
                 }

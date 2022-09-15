@@ -34,6 +34,7 @@ public class Home extends AppCompatActivity {
 
     private Uri imageUri;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +52,6 @@ public class Home extends AppCompatActivity {
             gallery.setAction(Intent.ACTION_GET_CONTENT);
             gallery.setType("image/*");
             startActivityForResult(gallery, 2);
-
-
         });
 
         upload.setOnClickListener(view -> {
