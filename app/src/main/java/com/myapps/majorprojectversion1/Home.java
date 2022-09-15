@@ -26,7 +26,7 @@ import com.google.firebase.storage.UploadTask;
 
 public class Home extends AppCompatActivity {
 
-    private Button upload, viewAll;
+    private Button viewAll;
     private ProgressBar progressBar;
     private ImageView imageView;
     private final DatabaseReference root = FirebaseDatabase.getInstance("https://majorprojectversion1-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("images");
@@ -41,8 +41,7 @@ public class Home extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-        upload = findViewById(R.id.btnUpload);
-        viewAll = findViewById(R.id.btnSeeAll);
+        Button upload = findViewById(R.id.btnUpload);
         progressBar = findViewById(R.id.progressBar);
         imageView = findViewById(R.id.imgView);
         progressBar.setVisibility(View.INVISIBLE);

@@ -5,12 +5,33 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldTitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/enter_title_of_ad">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
     <ImageView
         android:id="@+id/imgView"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:layout_below="@id/outlinedTextFieldTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_baseline_image_24"
         tools:ignore="ContentDescription" />
 
@@ -18,26 +39,119 @@
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldQuestion"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/imgView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/enter_title_of_ad">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldOption1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/outlinedTextFieldQuestion"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/option_1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOption1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldOption2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/outlinedTextFieldQuestion"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/option_2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldOption3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/outlinedTextFieldOption1"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/option_3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOption3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldOption4"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/outlinedTextFieldOption2"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/option_4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOption4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnUpload"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imgView"
+        android:layout_below="@+id/outlinedTextFieldOption4"
         android:layout_centerInParent="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:text="@string/upload" />
-
-    <Button
-        android:id="@+id/btnSeeAll"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnUpload"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:text="@string/see_all" />
 
 
 </RelativeLayout>

@@ -18,7 +18,7 @@ public class Register extends AppCompatActivity {
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
-    private TextInputEditText email, username, password, phone;
+    private static TextInputEditText email, username, password, phone;
 
 
     @Override
@@ -40,6 +40,7 @@ public class Register extends AppCompatActivity {
             firebaseDatabase = FirebaseDatabase.getInstance("https://majorprojectversion1-default-rtdb.asia-southeast1.firebasedatabase.app/");
             databaseReference = firebaseDatabase.getReference("users");
 
+
             String regEmail = Objects.requireNonNull(email.getText()).toString();
             String regUsername = Objects.requireNonNull(username.getText()).toString();
             String regPassword = Objects.requireNonNull(password.getText()).toString();
@@ -52,4 +53,6 @@ public class Register extends AppCompatActivity {
 
 
     }
+
+
 }
